@@ -1,38 +1,51 @@
-name: Generate Activity Graph
+name: Generate Contribution Graph
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "17 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Generate activity graph
-        uses: maurodesouza/github-readme-activity-graph-action@v1
-        with:
-          username: ${{ github.repository_owner }}
-          options: >-
-            theme=tokyo-night
-            &hide_border=true
-            &area=true
-            &custom_title=GitHub Activity
-            &radius=0
-          output_path: dist/activity-graph.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish graph
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
+      - name: Generate contribution graph
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: vasile-lazar
+        run: |
+          python scripts/generate_activity_graph.py
+
+      - name: Publish SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin output:output || true
+
+          if git show-ref --verify --quiet refs/heads/output; then
+            git checkout output
+          else
+            git checkout --orphan output
+            git rm -rf . || true
+          fi
+
+          mkdir -p .
+
+          cp /tmp/activity-graph.svg activity-graph.svg
+
+          git add activity-graph.svg
+
+          if git diff --cached --quiet; then
+            echo "No changes to activity graph."
+          else
+            git commit -m "Update contribution graph"
+            git push origin output
+          fi
