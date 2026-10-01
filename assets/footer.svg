@@ -1,0 +1,452 @@
+<svg width="1536" height="280" viewBox="0 0 1536 280"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <radialGradient id="bg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#171027"/>
+      <stop offset="55%" stop-color="#0d0918"/>
+      <stop offset="100%" stop-color="#07050d"/>
+    </radialGradient>
+
+    <linearGradient id="leftFade" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity=".65"/>
+    </linearGradient>
+
+    <linearGradient id="rightFade" x1="1" x2="0">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity=".65"/>
+    </linearGradient>
+
+    <filter id="glow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+
+    <filter id="bigGlow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+
+    <clipPath id="clip">
+      <rect width="1536" height="280" rx="16"/>
+    </clipPath>
+
+  </defs>
+
+  <!-- Background -->
+  <rect width="1536" height="280" fill="url(#bg)"/>
+
+  <g clip-path="url(#clip)">
+
+    <!-- center atmospheric glow -->
+    <ellipse
+      cx="768"
+      cy="140"
+      rx="390"
+      ry="100"
+      fill="#7c3aed"
+      opacity=".055"
+      filter="url(#bigGlow)"
+    />
+
+    <!-- ======================================================= -->
+    <!-- LEFT CONVERGING NETWORK -->
+    <!-- ======================================================= -->
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+      <path
+        d="M-20 42
+           L135 68
+           L270 38
+           L405 92
+           L545 62
+           L665 112
+           L730 140"
+        stroke="url(#leftFade)"
+        stroke-width="1.35"
+      />
+
+      <path
+        d="M-30 145
+           L125 115
+           L260 170
+           L400 125
+           L535 178
+           L665 160
+           L730 140"
+        stroke="url(#leftFade)"
+        stroke-width="1.2"
+      />
+
+      <path
+        d="M40 285
+           L145 218
+           L280 252
+           L410 200
+           L550 225
+           L665 170
+           L730 140"
+        stroke="url(#leftFade)"
+        stroke-width="1.1"
+      />
+
+      <!-- cross-links -->
+      <path d="M135 68 L125 115"/>
+      <path d="M270 38 L260 170"/>
+      <path d="M405 92 L400 125"/>
+      <path d="M545 62 L535 178"/>
+
+      <path d="M260 170 L280 252"/>
+      <path d="M400 125 L410 200"/>
+      <path d="M535 178 L550 225"/>
+
+      <!-- diagonals -->
+      <path
+        d="M135 68 L260 170"
+        stroke="#a855f7"
+        stroke-opacity=".17"
+      />
+
+      <path
+        d="M270 38 L400 125"
+        stroke="#a855f7"
+        stroke-opacity=".18"
+      />
+
+      <path
+        d="M405 92 L535 178"
+        stroke="#a855f7"
+        stroke-opacity=".16"
+      />
+
+      <path
+        d="M280 252 L535 178"
+        stroke="#a855f7"
+        stroke-opacity=".11"
+      />
+
+    </g>
+
+    <!-- ======================================================= -->
+    <!-- RIGHT CONVERGING NETWORK -->
+    <!-- ======================================================= -->
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+      <path
+        d="M1556 42
+           L1401 68
+           L1266 38
+           L1131 92
+           L991 62
+           L871 112
+           L806 140"
+        stroke="url(#rightFade)"
+        stroke-width="1.35"
+      />
+
+      <path
+        d="M1566 145
+           L1411 115
+           L1276 170
+           L1136 125
+           L1001 178
+           L871 160
+           L806 140"
+        stroke="url(#rightFade)"
+        stroke-width="1.2"
+      />
+
+      <path
+        d="M1496 285
+           L1391 218
+           L1256 252
+           L1126 200
+           L986 225
+           L871 170
+           L806 140"
+        stroke="url(#rightFade)"
+        stroke-width="1.1"
+      />
+
+      <path d="M1401 68 L1411 115"/>
+      <path d="M1266 38 L1276 170"/>
+      <path d="M1131 92 L1136 125"/>
+      <path d="M991 62 L1001 178"/>
+
+      <path d="M1276 170 L1256 252"/>
+      <path d="M1136 125 L1126 200"/>
+      <path d="M1001 178 L986 225"/>
+
+      <path
+        d="M1401 68 L1276 170"
+        stroke="#a855f7"
+        stroke-opacity=".17"
+      />
+
+      <path
+        d="M1266 38 L1136 125"
+        stroke="#a855f7"
+        stroke-opacity=".18"
+      />
+
+      <path
+        d="M1131 92 L1001 178"
+        stroke="#a855f7"
+        stroke-opacity=".16"
+      />
+
+      <path
+        d="M1256 252 L1001 178"
+        stroke="#a855f7"
+        stroke-opacity=".11"
+      />
+
+    </g>
+
+    <!-- ======================================================= -->
+    <!-- CENTRAL CONVERGENCE -->
+    <!-- ======================================================= -->
+
+    <g fill="none" stroke="#c084fc" stroke-linecap="round">
+
+      <path
+        d="M665 112 L700 128 L730 140"
+        stroke-opacity=".32"
+        stroke-width="1.2"
+      />
+
+      <path
+        d="M665 160 L700 150 L730 140"
+        stroke-opacity=".28"
+      />
+
+      <path
+        d="M665 170 L700 155 L730 140"
+        stroke-opacity=".2"
+      />
+
+      <path
+        d="M871 112 L836 128 L806 140"
+        stroke-opacity=".32"
+        stroke-width="1.2"
+      />
+
+      <path
+        d="M871 160 L836 150 L806 140"
+        stroke-opacity=".28"
+      />
+
+      <path
+        d="M871 170 L836 155 L806 140"
+        stroke-opacity=".2"
+      />
+
+      <path
+        d="M730 140 L768 128 L806 140"
+        stroke-opacity=".4"
+        stroke-width="1.25"
+      />
+
+    </g>
+
+    <!-- ======================================================= -->
+    <!-- NODE GLOWS -->
+    <!-- ======================================================= -->
+
+    <g fill="#a855f7" opacity=".24" filter="url(#softGlow)">
+
+      <!-- left -->
+      <circle cx="135" cy="68" r="7"/>
+      <circle cx="270" cy="38" r="7"/>
+      <circle cx="405" cy="92" r="7"/>
+      <circle cx="545" cy="62" r="7"/>
+      <circle cx="665" cy="112" r="7"/>
+
+      <circle cx="125" cy="115" r="6"/>
+      <circle cx="260" cy="170" r="7"/>
+      <circle cx="400" cy="125" r="6"/>
+      <circle cx="535" cy="178" r="7"/>
+
+      <circle cx="145" cy="218" r="6"/>
+      <circle cx="280" cy="252" r="7"/>
+      <circle cx="410" cy="200" r="6"/>
+      <circle cx="550" cy="225" r="7"/>
+
+      <!-- right -->
+      <circle cx="1401" cy="68" r="7"/>
+      <circle cx="1266" cy="38" r="7"/>
+      <circle cx="1131" cy="92" r="7"/>
+      <circle cx="991" cy="62" r="7"/>
+      <circle cx="871" cy="112" r="7"/>
+
+      <circle cx="1411" cy="115" r="6"/>
+      <circle cx="1276" cy="170" r="7"/>
+      <circle cx="1136" cy="125" r="6"/>
+      <circle cx="1001" cy="178" r="7"/>
+
+      <circle cx="1391" cy="218" r="6"/>
+      <circle cx="1256" cy="252" r="7"/>
+      <circle cx="1126" cy="200" r="6"/>
+      <circle cx="986" cy="225" r="7"/>
+
+    </g>
+
+    <!-- ======================================================= -->
+    <!-- NODES -->
+    <!-- ======================================================= -->
+
+    <g fill="#c084fc" filter="url(#glow)">
+
+      <circle cx="135" cy="68" r="2.7"/>
+      <circle cx="270" cy="38" r="2.7"/>
+      <circle cx="405" cy="92" r="3"/>
+      <circle cx="545" cy="62" r="2.7"/>
+      <circle cx="665" cy="112" r="3"/>
+
+      <circle cx="125" cy="115" r="2.3"/>
+      <circle cx="260" cy="170" r="2.8"/>
+      <circle cx="400" cy="125" r="2.3"/>
+      <circle cx="535" cy="178" r="2.8"/>
+
+      <circle cx="145" cy="218" r="2.3"/>
+      <circle cx="280" cy="252" r="2.8"/>
+      <circle cx="410" cy="200" r="2.3"/>
+      <circle cx="550" cy="225" r="2.8"/>
+
+      <circle cx="1401" cy="68" r="2.7"/>
+      <circle cx="1266" cy="38" r="2.7"/>
+      <circle cx="1131" cy="92" r="3"/>
+      <circle cx="991" cy="62" r="2.7"/>
+      <circle cx="871" cy="112" r="3"/>
+
+      <circle cx="1411" cy="115" r="2.3"/>
+      <circle cx="1276" cy="170" r="2.8"/>
+      <circle cx="1136" cy="125" r="2.3"/>
+      <circle cx="1001" cy="178" r="2.8"/>
+
+      <circle cx="1391" cy="218" r="2.3"/>
+      <circle cx="1256" cy="252" r="2.8"/>
+      <circle cx="1126" cy="200" r="2.3"/>
+      <circle cx="986" cy="225" r="2.8"/>
+
+      <!-- center -->
+      <circle cx="730" cy="140" r="3"/>
+      <circle cx="768" cy="128" r="3.5"/>
+      <circle cx="806" cy="140" r="3"/>
+
+    </g>
+
+    <!-- ======================================================= -->
+    <!-- ANIMATED PARTICLES -->
+    <!-- ======================================================= -->
+
+    <g fill="#f3e8ff" filter="url(#glow)">
+
+      <circle r="1.7">
+        <animateMotion
+          dur="7s"
+          repeatCount="indefinite"
+          path="M-20 42 L135 68 L270 38 L405 92 L545 62 L665 112 L730 140 L768 128"/>
+      </circle>
+
+      <circle r="1.5">
+        <animateMotion
+          dur="8s"
+          begin="-3s"
+          repeatCount="indefinite"
+          path="M-30 145 L125 115 L260 170 L400 125 L535 178 L665 160 L730 140"/>
+      </circle>
+
+      <circle r="1.6">
+        <animateMotion
+          dur="8.5s"
+          begin="-5s"
+          repeatCount="indefinite"
+          path="M40 285 L145 218 L280 252 L410 200 L550 225 L665 170 L730 140"/>
+      </circle>
+
+      <circle r="1.7">
+        <animateMotion
+          dur="7s"
+          begin="-2s"
+          repeatCount="indefinite"
+          path="M1556 42 L1401 68 L1266 38 L1131 92 L991 62 L871 112 L806 140 L768 128"/>
+      </circle>
+
+      <circle r="1.5">
+        <animateMotion
+          dur="8s"
+          begin="-4s"
+          repeatCount="indefinite"
+          path="M1566 145 L1411 115 L1276 170 L1136 125 L1001 178 L871 160 L806 140"/>
+      </circle>
+
+      <circle r="1.6">
+        <animateMotion
+          dur="8.5s"
+          begin="-1s"
+          repeatCount="indefinite"
+          path="M1496 285 L1391 218 L1256 252 L1126 200 L986 225 L871 170 L806 140"/>
+      </circle>
+
+    </g>
+
+    <!-- Center pulse -->
+    <circle
+      cx="768"
+      cy="128"
+      r="5"
+      fill="none"
+      stroke="#c084fc"
+      stroke-width="1"
+      opacity=".5">
+
+      <animate
+        attributeName="r"
+        values="5;14;5"
+        dur="3.5s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values=".55;0;.55"
+        dur="3.5s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+    <!-- bottom fade -->
+    <rect
+      y="245"
+      width="1536"
+      height="35"
+      fill="#07050d"
+      opacity=".5"
+    />
+
+  </g>
+
+  <rect
+    x=".5"
+    y=".5"
+    width="1535"
+    height="279"
+    rx="16"
+    fill="none"
+    stroke="#a855f7"
+    stroke-opacity=".12"
+  />
+
+</svg>
