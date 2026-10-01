@@ -3,7 +3,6 @@
 
   <defs>
 
-
     <radialGradient id="bg" cx="50%" cy="48%" r="75%">
       <stop offset="0%"   stop-color="#1b1230"/>
       <stop offset="45%"  stop-color="#0f0a1d"/>
@@ -22,22 +21,16 @@
       <stop offset="100%" stop-color="#c084fc" stop-opacity=".65"/>
     </linearGradient>
 
-
     <filter id="glow"
             x="-200%"
             y="-200%"
             width="400%"
             height="400%">
-
-      <feGaussianBlur
-        stdDeviation="3"
-        result="blur"/>
-
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
-
     </filter>
 
     <filter id="softGlow"
@@ -45,9 +38,7 @@
             y="-200%"
             width="400%"
             height="400%">
-
       <feGaussianBlur stdDeviation="8"/>
-
     </filter>
 
     <filter id="bigGlow"
@@ -55,30 +46,20 @@
             y="-200%"
             width="400%"
             height="400%">
-
       <feGaussianBlur stdDeviation="18"/>
-
     </filter>
 
-
-
     <clipPath id="clip">
-      <rect
-        width="1536"
-        height="500"
-        rx="16"/>
+      <rect width="1536" height="500"/>
     </clipPath>
 
   </defs>
 
-
-
-
+  <!-- FULL HEIGHT BACKGROUND -->
   <rect
     width="1536"
     height="500"
     fill="url(#bg)"/>
-
 
   <g clip-path="url(#clip)">
 
@@ -94,12 +75,13 @@
       filter="url(#bigGlow)"/>
 
 
-    <g
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round">
+    <!-- ===================================================== -->
+    <!-- LEFT NETWORK -->
+    <!-- ===================================================== -->
 
-      <!-- Main network paths -->
+    <g fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round">
 
       <path
         d="M-30 90
@@ -134,9 +116,6 @@
         stroke="url(#lineLeft)"
         stroke-width="1.15"/>
 
-
-      <!-- Vertical / cross connections -->
-
       <path d="M120 55 L110 210"/>
       <path d="M250 120 L245 275"/>
       <path d="M390 70 L380 225"/>
@@ -147,44 +126,36 @@
       <path d="M380 225 L400 350"/>
       <path d="M515 285 L540 390"/>
 
+      <path d="M120 55 L245 275"
+            stroke="#a855f7"
+            stroke-opacity=".16"/>
 
-      <!-- Diagonal connections -->
+      <path d="M250 120 L380 225"
+            stroke="#a855f7"
+            stroke-opacity=".20"/>
 
-      <path
-        d="M120 55 L245 275"
-        stroke="#a855f7"
-        stroke-opacity=".16"/>
+      <path d="M390 70 L515 285"
+            stroke="#a855f7"
+            stroke-opacity=".15"/>
 
-      <path
-        d="M250 120 L380 225"
-        stroke="#a855f7"
-        stroke-opacity=".20"/>
+      <path d="M530 135 L650 250"
+            stroke="#a855f7"
+            stroke-opacity=".20"/>
 
-      <path
-        d="M390 70 L515 285"
-        stroke="#a855f7"
-        stroke-opacity=".15"/>
-
-      <path
-        d="M530 135 L650 250"
-        stroke="#a855f7"
-        stroke-opacity=".20"/>
-
-      <path
-        d="M265 430 L515 285"
-        stroke="#a855f7"
-        stroke-opacity=".12"/>
+      <path d="M265 430 L515 285"
+            stroke="#a855f7"
+            stroke-opacity=".12"/>
 
     </g>
 
 
+    <!-- ===================================================== -->
+    <!-- RIGHT NETWORK -->
+    <!-- ===================================================== -->
 
-    <g
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round">
-
-      <!-- Main network paths -->
+    <g fill="none"
+       stroke-linecap="round"
+       stroke-linejoin="round">
 
       <path
         d="M1566 90
@@ -219,9 +190,6 @@
         stroke="url(#lineRight)"
         stroke-width="1.15"/>
 
-
-      <!-- Vertical / cross connections -->
-
       <path d="M1416 55 L1426 210"/>
       <path d="M1286 120 L1291 275"/>
       <path d="M1146 70 L1156 225"/>
@@ -232,136 +200,92 @@
       <path d="M1156 225 L1136 350"/>
       <path d="M1021 285 L996 390"/>
 
+      <path d="M1416 55 L1291 275"
+            stroke="#a855f7"
+            stroke-opacity=".16"/>
 
-      <!-- Diagonal connections -->
+      <path d="M1286 120 L1156 225"
+            stroke="#a855f7"
+            stroke-opacity=".20"/>
 
-      <path
-        d="M1416 55 L1291 275"
-        stroke="#a855f7"
-        stroke-opacity=".16"/>
+      <path d="M1146 70 L1021 285"
+            stroke="#a855f7"
+            stroke-opacity=".15"/>
 
-      <path
-        d="M1286 120 L1156 225"
-        stroke="#a855f7"
-        stroke-opacity=".20"/>
+      <path d="M1006 135 L886 250"
+            stroke="#a855f7"
+            stroke-opacity=".20"/>
 
-      <path
-        d="M1146 70 L1021 285"
-        stroke="#a855f7"
-        stroke-opacity=".15"/>
-
-      <path
-        d="M1006 135 L886 250"
-        stroke="#a855f7"
-        stroke-opacity=".20"/>
-
-      <path
-        d="M1271 430 L1021 285"
-        stroke="#a855f7"
-        stroke-opacity=".12"/>
+      <path d="M1271 430 L1021 285"
+            stroke="#a855f7"
+            stroke-opacity=".12"/>
 
     </g>
 
 
+    <!-- ===================================================== -->
+    <!-- SECONDARY CONNECTIONS -->
+    <!-- ===================================================== -->
 
-    <g
-      fill="none"
-      stroke="#a855f7"
-      stroke-opacity=".10"
-      stroke-width="1">
+    <g fill="none"
+       stroke="#a855f7"
+       stroke-opacity=".10"
+       stroke-width="1">
 
-      <path
-        d="M120 55
-           L390 70
-           L650 105"/>
+      <path d="M120 55 L390 70 L650 105"/>
+      <path d="M1416 55 L1146 70 L886 105"/>
 
-      <path
-        d="M1416 55
-           L1146 70
-           L886 105"/>
+      <path d="M110 210 L380 225 L650 250"/>
+      <path d="M1426 210 L1156 225 L886 250"/>
 
-      <path
-        d="M110 210
-           L380 225
-           L650 250"/>
-
-      <path
-        d="M1426 210
-           L1156 225
-           L886 250"/>
-
-      <path
-        d="M130 390
-           L400 350
-           L650 300"/>
-
-      <path
-        d="M1406 390
-           L1136 350
-           L886 300"/>
+      <path d="M130 390 L400 350 L650 300"/>
+      <path d="M1406 390 L1136 350 L886 300"/>
 
     </g>
 
 
-    <g
-      fill="none"
-      stroke="#c084fc"
-      stroke-linecap="round">
+    <!-- ===================================================== -->
+    <!-- CENTRAL CONVERGENCE -->
+    <!-- ===================================================== -->
 
-      <path
-        d="M650 105
-           L705 155
-           L735 220"
-        stroke-opacity=".34"
-        stroke-width="1.2"/>
+    <g fill="none"
+       stroke="#c084fc"
+       stroke-linecap="round">
 
-      <path
-        d="M886 105
-           L831 155
-           L801 220"
-        stroke-opacity=".34"
-        stroke-width="1.2"/>
+      <path d="M650 105 L705 155 L735 220"
+            stroke-opacity=".34"
+            stroke-width="1.2"/>
 
-      <path
-        d="M650 250
-           L700 235
-           L735 220"
-        stroke-opacity=".25"/>
+      <path d="M886 105 L831 155 L801 220"
+            stroke-opacity=".34"
+            stroke-width="1.2"/>
 
-      <path
-        d="M886 250
-           L836 235
-           L801 220"
-        stroke-opacity=".25"/>
+      <path d="M650 250 L700 235 L735 220"
+            stroke-opacity=".25"/>
 
-      <path
-        d="M650 300
-           L705 270
-           L735 220"
-        stroke-opacity=".20"/>
+      <path d="M886 250 L836 235 L801 220"
+            stroke-opacity=".25"/>
 
-      <path
-        d="M886 300
-           L831 270
-           L801 220"
-        stroke-opacity=".20"/>
+      <path d="M650 300 L705 270 L735 220"
+            stroke-opacity=".20"/>
 
-      <path
-        d="M735 220
-           L768 205
-           L801 220"
-        stroke-opacity=".45"
-        stroke-width="1.3"/>
+      <path d="M886 300 L831 270 L801 220"
+            stroke-opacity=".20"/>
+
+      <path d="M735 220 L768 205 L801 220"
+            stroke-opacity=".45"
+            stroke-width="1.3"/>
 
     </g>
 
 
-    <g
-      fill="#a855f7"
-      opacity=".25"
-      filter="url(#softGlow)">
+    <!-- ===================================================== -->
+    <!-- NODE GLOWS -->
+    <!-- ===================================================== -->
 
-      <!-- LEFT -->
+    <g fill="#a855f7"
+       opacity=".25"
+       filter="url(#softGlow)">
 
       <circle cx="120" cy="55" r="9"/>
       <circle cx="250" cy="120" r="8"/>
@@ -378,9 +302,6 @@
       <circle cx="265" cy="430" r="8"/>
       <circle cx="400" cy="350" r="8"/>
       <circle cx="540" cy="390" r="8"/>
-
-
-      <!-- RIGHT -->
 
       <circle cx="1416" cy="55" r="9"/>
       <circle cx="1286" cy="120" r="8"/>
@@ -401,13 +322,12 @@
     </g>
 
 
+    <!-- ===================================================== -->
+    <!-- NODES -->
+    <!-- ===================================================== -->
 
-
-    <g
-      fill="#c084fc"
-      filter="url(#glow)">
-
-      <!-- LEFT -->
+    <g fill="#c084fc"
+       filter="url(#glow)">
 
       <circle cx="120" cy="55" r="3"/>
       <circle cx="250" cy="120" r="3"/>
@@ -425,9 +345,6 @@
       <circle cx="400" cy="350" r="2.5"/>
       <circle cx="540" cy="390" r="3"/>
 
-
-      <!-- RIGHT -->
-
       <circle cx="1416" cy="55" r="3"/>
       <circle cx="1286" cy="120" r="3"/>
       <circle cx="1146" cy="70" r="3"/>
@@ -444,138 +361,73 @@
       <circle cx="1136" cy="350" r="2.5"/>
       <circle cx="996" cy="390" r="3"/>
 
-
-      <!-- CENTER -->
-
       <circle cx="735" cy="220" r="3.5"/>
       <circle cx="768" cy="205" r="4"/>
       <circle cx="801" cy="220" r="3.5"/>
 
     </g>
 
-    <g
-      fill="#f3e8ff"
-      filter="url(#glow)">
+
+    <!-- ===================================================== -->
+    <!-- ANIMATED PARTICLES -->
+    <!-- ===================================================== -->
+
+    <g fill="#f3e8ff"
+       filter="url(#glow)">
 
       <circle r="2">
-
         <animateMotion
           dur="7s"
           repeatCount="indefinite"
-          path="
-            M-30 90
-            L120 55
-            L250 120
-            L390 70
-            L530 135
-            L665 105
-            L735 220
-            L768 205
-          "/>
-
+          path="M-30 90 L120 55 L250 120 L390 70 L530 135 L665 105 L735 220 L768 205"/>
       </circle>
 
-
       <circle r="1.7">
-
         <animateMotion
           dur="8s"
           begin="-3s"
           repeatCount="indefinite"
-          path="
-            M-40 260
-            L110 210
-            L245 275
-            L380 225
-            L515 285
-            L650 250
-            L735 220
-          "/>
-
+          path="M-40 260 L110 210 L245 275 L380 225 L515 285 L650 250 L735 220"/>
       </circle>
 
-
       <circle r="1.8">
-
         <animateMotion
           dur="8.5s"
           begin="-5s"
           repeatCount="indefinite"
-          path="
-            M30 480
-            L130 390
-            L265 430
-            L400 350
-            L540 390
-            L650 300
-            L735 220
-          "/>
-
+          path="M30 480 L130 390 L265 430 L400 350 L540 390 L650 300 L735 220"/>
       </circle>
 
-
       <circle r="2">
-
         <animateMotion
           dur="7s"
           begin="-2s"
           repeatCount="indefinite"
-          path="
-            M1566 90
-            L1416 55
-            L1286 120
-            L1146 70
-            L1006 135
-            L871 105
-            L801 220
-            L768 205
-          "/>
-
+          path="M1566 90 L1416 55 L1286 120 L1146 70 L1006 135 L871 105 L801 220 L768 205"/>
       </circle>
 
-
       <circle r="1.7">
-
         <animateMotion
           dur="8s"
           begin="-4s"
           repeatCount="indefinite"
-          path="
-            M1576 260
-            L1426 210
-            L1291 275
-            L1156 225
-            L1021 285
-            L886 250
-            L801 220
-          "/>
-
+          path="M1576 260 L1426 210 L1291 275 L1156 225 L1021 285 L886 250 L801 220"/>
       </circle>
 
-
       <circle r="1.8">
-
         <animateMotion
           dur="8.5s"
           begin="-1s"
           repeatCount="indefinite"
-          path="
-            M1506 480
-            L1406 390
-            L1271 430
-            L1136 350
-            L996 390
-            L886 300
-            L801 220
-          "/>
-
+          path="M1506 480 L1406 390 L1271 430 L1136 350 L996 390 L886 300 L801 220"/>
       </circle>
 
     </g>
 
 
-
-    <!-- Outer soft glow -->
+    <!-- ===================================================== -->
+    <!-- CENTRAL NAME PANEL -->
+    <!-- ===================================================== -->
 
     <rect
       x="548"
@@ -586,9 +438,6 @@
       fill="#8b5cf6"
       opacity=".10"
       filter="url(#softGlow)"/>
-
-
-    <!-- Main panel -->
 
     <rect
       x="568"
@@ -602,9 +451,6 @@
       stroke-opacity=".30"
       stroke-width="1"/>
 
-
-    <!-- Subtle inner border -->
-
     <rect
       x="573"
       y="181"
@@ -615,9 +461,6 @@
       stroke="#c084fc"
       stroke-opacity=".055"/>
 
-
-    <!-- Top accent -->
-
     <line
       x1="718"
       y1="176"
@@ -627,8 +470,6 @@
       stroke-opacity=".7"
       stroke-width="1"/>
 
-
-  
     <text
       x="768"
       y="215"
@@ -639,11 +480,8 @@
       font-size="42"
       font-weight="700"
       letter-spacing="3.5">
-
       VASILE LAZĂR
-
     </text>
-
 
     <text
       x="768"
@@ -653,11 +491,8 @@
       font-family="Inter, Segoe UI, Arial, sans-serif"
       font-size="12"
       letter-spacing="1.8">
-
       BACKEND · DATA · SYSTEMS · PROBLEM SOLVING
-
     </text>
-
 
     <circle
       cx="768"
@@ -682,21 +517,14 @@
 
     </circle>
 
-    <rect
-      y="440"
-      width="1536"
-      height="60"
-      fill="#07050d"
-      opacity=".45"/>
-
   </g>
 
+  <!-- SHARP EDGE BORDER -->
   <rect
     x=".5"
     y=".5"
     width="1535"
     height="499"
-    rx="16"
     fill="none"
     stroke="#a855f7"
     stroke-opacity=".13"/>
